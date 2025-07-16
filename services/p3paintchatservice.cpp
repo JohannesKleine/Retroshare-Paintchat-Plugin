@@ -73,7 +73,7 @@ void p3PaintChatService::sendInit(std::string id, ImageResource res){
     RsPaintChatItem* item=new RsPaintChatItem();
     item->command=COMMAND_INIT;
 
-    // tut nicht, eventuell bild zu groß?
+    // tut nicht, eventuell bild zu groÃŸ?
     /*
     uint32_t size=res.serial_size();
     void* buf=malloc(size);
@@ -83,7 +83,7 @@ void p3PaintChatService::sendInit(std::string id, ImageResource res){
     */
 
 	item->PeerId(RsPeerId(id));
-    // der service wird eigentümer des items
+    // der service wird eigentÃ¼mer des items
     sendItem(item);
 }
 
@@ -95,7 +95,7 @@ bool p3PaintChatService::haveUpdate(std::string id){
             receivedInit=true;
         }
     }
-    // könnte eigentlich auch ohne syncEngine gehen
+    // kÃ¶nnte eigentlich auch ohne syncEngine gehen
     std::map<std::string,SyncEngine<ImageResource,ImageDiff>*>::iterator it=syncEngines.find(id);
     if(it!=syncEngines.end()){
         return (it->second->haveUpdate() || receivedInit);
@@ -174,6 +174,6 @@ void p3PaintChatService::PaintChatConnection::sendData(void *data, const uint32_
     item->binData.setBinData(data,size);
 	item->PeerId(RsPeerId(connId));
     item->print(std::cerr,1);
-    // der service wird eigentümer des items
+    // der service wird eigentÃ¼mer des items
     service->sendItem(item);
 }

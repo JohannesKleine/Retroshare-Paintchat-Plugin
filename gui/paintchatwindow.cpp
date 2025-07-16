@@ -219,7 +219,7 @@ void PaintChatWindow::on_pushButton8px_clicked()
 
 void PaintChatWindow::on_pushButtonClear_clicked()
 {
-    //käse tut ned, vermutlich wegen gleichen timestamps
+    //kÃ¤se tut ned, vermutlich wegen gleichen timestamps
     /*
     // not the best way to reset the image, because it causes the entire image to be transmitted
     // first overwrite with black
@@ -230,9 +230,9 @@ void PaintChatWindow::on_pushButtonClear_clicked()
     updateImage();
     */
 
-    // andere Lösung:
+    // andere LÃ¶sung:
     // sendet viele bytes, weil resource unkomprimiert ist
-    // tut nicht, vielleicht zu große items?
+    // tut nicht, vielleicht zu groÃŸe items?
 
     ui->paintWidget->fillImage(Qt::white);
 //    ImageResource res;

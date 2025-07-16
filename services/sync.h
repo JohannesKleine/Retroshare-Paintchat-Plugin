@@ -7,8 +7,8 @@
 #include <ctime>
 #include <iostream>
 
-// nur für shiftVoidPointer
-// todo: lösugn finden
+// nur fÃ¼r shiftVoidPointer
+// todo: lÃ¶sugn finden
 #include "imageresource.h"
 
 // SyncEngine uses this interface to send Data
@@ -50,7 +50,7 @@ class Diff{
 
 
 
-// todo: checksummendings machen, items mit gleichem timestamp händeln
+// todo: checksummendings machen, items mit gleichem timestamp hÃ¤ndeln
 
 template <class Resource_T, class Diff_T>
 class SyncEngine{
@@ -58,7 +58,7 @@ public:
     SyncEngine(Connection *c):connection(c),updated(false){
 
     }
-    // später:
+    // spÃ¤ter:
     // virtual void tick();
 
     // call at first to init with resource
@@ -158,7 +158,7 @@ private:
             return false;
         }
         currentRessourceState=history.front().resource;
-        // der erste item ist resource, und wird daher übersprungen
+        // der erste item ist resource, und wird daher Ã¼bersprungen
         typename std::list<SyncItem>::iterator it;
         for(it=history.begin(); it!=history.end(); it++){
             if(it->type==SyncItem::TYPE_DIFF){

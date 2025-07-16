@@ -124,7 +124,7 @@ ImageDiff ImageResource::diff(ImageResource modifiedResource, bool &resourceIsMo
             *diffBytes=((uint8_t*)modifiedResource.data)[i];
             diffBytes++;
         }
-        //modifiedResource.data=shiftVoidPointer(modifiedResource.data,1); //------- k‰se, wegen [i]
+        //modifiedResource.data=shiftVoidPointer(modifiedResource.data,1); //------- k√§se, wegen [i]
         bitNo++;
         if(bitNo==8){
             bitNo=0;
