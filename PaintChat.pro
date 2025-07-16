@@ -1,5 +1,5 @@
 !include("../Common/retroshare_plugin.pri"): error("Could not include file ../Common/retroshare_plugin.pri")
-!include("../../libretroshare/src/use_libretroshare.pri"):error("Including")
+#!include("../../libretroshare/src/use_libretroshare.pri"):error("Including")
 
 CONFIG += qt uic qrc 
 
